@@ -1,66 +1,63 @@
 # ESG Analysis of Corporate 10-K Filings and Stock Performance
 
-This repository contains the coding implementation for a research project conducted as part of the **Quantitative Text Analysis for Social Science (PUBL0099)** module at UCL. The research quantitatively investigates ESG (Environmental, Social, Governance) disclosures in corporate 10-K filings and their impact on stock performance.
+This repository contains the code and materials for a research project submitted for the **Quantitative Text Analysis for Social Science (PUBL0099)** module at UCL. The project investigates ESG (Environmental, Social, Governance) disclosures in 10-K filings and their relationship with stock performance.
 
-## Project Overview
+## Overview
 
-The primary goal of this analysis was to examine whether the frequency and content of ESG-related terms within corporate annual 10-K filings correlate with stock market performance indicators. Using quantitative text analysis methods, particularly dictionary-based approaches, the study explores sector-specific disclosure patterns and their implications on financial performance.
+The study explores whether the frequency of ESG-related terms in annual 10-K filings is associated with stock market performance. Using dictionary-based text analysis, the research identifies sector-specific ESG disclosure patterns and evaluates their financial relevance.
 
 ## Methodology
 
-- **Data Collection:**
-  - 10-K filings retrieved from the SEC's EDGAR database for companies listed in the S&P 500 across four high-pollution sectors (Utilities, Materials, Energy, Industrials) from 2016 to 2024.
-
-- **Text Processing:**
-  - Tokenization, stop-word removal, and stemming using R’s Quanteda package.
-
-- **Analytical Approach:**
-  - Application of a domain-specific ESG dictionary (Baier et al., 2020).
-  - Frequency analysis of ESG terms by category.
-  - Fixed-effects regression models to assess relationships between ESG term frequency and stock performance indicators such as cumulative abnormal returns (CAR) and adjusted stock prices.
+- **Filings**: 10-Ks collected from the SEC EDGAR database for S&P 500 firms in four high-emission sectors (Utilities, Materials, Energy, Industrials), from 2016–2024.
+- **Text Analysis**: Preprocessing and tokenization done with `quanteda`. ESG content identified using a dictionary adapted from Baier et al. (2020).
+- **Modeling**: Fixed-effects panel regressions used to test the relationship between ESG disclosure intensity and:
+  - Cumulative Abnormal Returns (CAR)
+  - Adjusted Stock Prices
 
 ## Repository Structure
 
 ```
-├── data/               # Data files (raw and processed)
-├── scripts/            # R scripts for data scraping, processing, and analysis
-├── results/            # Generated visualizations and tables
-├── docs/               # Research paper PDF and supplementary documents
-└── README.md           # Project documentation
+├── [Analysis](./Analysis)       # Main R script and derived data objects
+├── [docs](./docs)               # Research paper and documentation
+├── [Writeup](./Writeup)         # Generated figures and tables
+└── README.md                    # Project overview
 ```
 
 ## Dependencies
 
-The analysis was conducted using R, leveraging libraries such as:
-- Quanteda
-- Tidyverse
-- Edgar
-- rvest
-- plm
-- simfinapi
+Main packages used in R:
 
-Install required libraries via:
-```R
+- `quanteda`
+- `tidyverse`
+- `edgar`
+- `rvest`
+- `plm`
+- `simfinapi`
+
+Install with:
+
+```r
 install.packages(c("quanteda", "tidyverse", "edgar", "rvest", "plm", "simfinapi"))
 ```
 
-## Usage
+## Reproduction
 
-1. Clone the repository:
+1. Clone the repo:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/acser00/10K-ESG-Insights.git
    ```
 
-2. Run scripts sequentially in the `/scripts` folder to replicate analyses:
-   ```bash
-   Rscript scripts/<script_name>.R
+2. Run the analysis:
+   ```r
+   source("Analysis/main.R")
    ```
 
-## Key Findings
+## Results Summary
 
-- Increased frequency of ESG disclosures observed, primarily driven by governance terms.
-- Significant positive correlation between ESG disclosures and adjusted stock prices, yet ambiguous results concerning cumulative abnormal returns.
+- Governance-related disclosures dominate ESG mentions across sectors.
+- Positive association between ESG word count and adjusted stock price.
+- Relationship with CAR is weaker and varies by model specification.
 
-## Further Information
+## More Info
 
-Detailed research findings and methodology discussions are available in the full research paper located under the `/docs` directory.
+The full research paper is in [`docs/`](./docs/). All code is in [`Analysis/`](./Analysis/).
