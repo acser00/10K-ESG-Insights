@@ -61,3 +61,9 @@ install.packages(c("quanteda", "tidyverse", "edgar", "rvest", "plm", "simfinapi"
 ## More Info
 
 The full research paper is in [`docs/`](./docs/). All code is in [`Analysis/`](./Analysis/).
+
+## Interactive Visualizations
+
+View key ESG visualizations here:  
+👉 [GitHub Pages Gallery](https://<your-username>.github.io/<repo-name>/gallery/)
+
