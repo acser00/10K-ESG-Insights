@@ -14,6 +14,12 @@ The study explores whether the frequency of ESG-related terms in annual 10-K fil
   - Cumulative Abnormal Returns (CAR)
   - Adjusted Stock Prices
 
+## Results Summary
+
+- Governance-related disclosures dominate ESG mentions across sectors.
+- Positive association between ESG word count and adjusted stock price.
+- Relationship with CAR is weaker and varies by model specification.
+
 ## Repository Structure
 
 ```
@@ -51,12 +57,6 @@ install.packages(c("quanteda", "tidyverse", "edgar", "rvest", "plm", "simfinapi"
    ```r
    source("Analysis/main.R")
    ```
-
-## Results Summary
-
-- Governance-related disclosures dominate ESG mentions across sectors.
-- Positive association between ESG word count and adjusted stock price.
-- Relationship with CAR is weaker and varies by model specification.
 
 ## More Info
 
