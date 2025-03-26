@@ -65,5 +65,5 @@ The full research paper is in [`docs/`](./docs/). All code is in [`Analysis/`](.
 ## Interactive Visualizations
 
 View key ESG visualizations here:  
-👉 [GitHub Pages Gallery](https://acser00.github.io/10K-ESG-Insights/gallery/)
+👉 [Figures](https://acser00.github.io/10K-ESG-Insights/gallery/)
 
