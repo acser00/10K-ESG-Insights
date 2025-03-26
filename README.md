@@ -19,7 +19,7 @@ The study explores whether the frequency of ESG-related terms in annual 10-K fil
 ```
 ├── [Analysis](./Analysis)       # Main R script and derived data objects
 ├── [docs](./docs)               # Research paper and documentation
-├── [Writeup](./Writeup)         # Generated figures and tables
+├── [Figures](./Figures)         # Generated figures and tables
 └── README.md                    # Project overview
 ```
 
